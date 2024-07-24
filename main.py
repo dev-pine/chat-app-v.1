@@ -31,8 +31,8 @@ st.markdown('</div>', unsafe_allow_html=True)
 
 # Bottom bar with input fields and button
 st.markdown('<div class="bottom-bar">', unsafe_allow_html=True)
-text = st.text_input("문자를 입력하세요: ")
 name = st.text_input("이름을 입력하세요: ")
+text = st.text_input("문자를 입력하세요: ")
 if st.button('대화 전송||대화확인'):
     if text:
         with open("d.txt", "a") as f:
