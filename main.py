@@ -17,6 +17,8 @@ css = """
     </style>
 """
 html(css, unsafe_allow_html=True)
+with st.container():
+    st.write("Main content goes here...")
 st.markdown('<div class="bottom-bar">', unsafe_allow_html=True)
 text = st.text_input("문자를 입력하세요: ")
 st.markdown('</div>', unsafe_allow_html=True)
