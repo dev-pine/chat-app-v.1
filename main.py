@@ -15,5 +15,6 @@ def check():
     with open("d.txt","r") as f:
       st.write(f.read()+"\n")
     time.sleep(1)
-p2 = threading.Thread(target=check)
-p2.start()
+check()
+# p2 = threading.Thread(target=check)
+# p2.start()
