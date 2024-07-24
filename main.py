@@ -11,8 +11,10 @@ def send():
         f.write(name+":"+text)
         f.write("\n")
 def check():
-  with open("d.txt","r") as f:
-    st.write(f.read()+"\n")
+  while True:
+    with open("d.txt","r") as f:
+      st.write(f.read()+"\n")
+    time.sleep(1)
 p1 = threading.Thread(target=send)
 p2 = threading.Thread(target=check)
 p1.start()
