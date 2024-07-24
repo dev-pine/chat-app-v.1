@@ -1,7 +1,7 @@
 import streamlit as st
 import threading
 import time
-st.title('나의 첫 웹서비스')
+st.title('검열없는 채팅방')
 name = st.text_input("이름을 입력하세요: ")
 text = st.text_input("문자를 입력하세요: ")
 place = st.empty()
