@@ -14,9 +14,10 @@ css = """
         background-color: #f1f1f1;
         padding: 10px;
         box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
     }
     .main-content {
-        margin-bottom: 60px; /* Adjust based on the height of the bottom bar */
+        padding-bottom: 60px; /* Space for the bottom bar */
     }
     </style>
 """
@@ -28,7 +29,7 @@ st.title('검열없는 채팅방')
 place = st.empty()
 st.markdown('</div>', unsafe_allow_html=True)
 
-# Bottom bar
+# Bottom bar with input fields and button
 st.markdown('<div class="bottom-bar">', unsafe_allow_html=True)
 text = st.text_input("문자를 입력하세요: ")
 name = st.text_input("이름을 입력하세요: ")
@@ -38,7 +39,7 @@ if st.button('대화 전송||대화확인'):
             f.write(name + ":" + text + "\n")
 st.markdown('</div>', unsafe_allow_html=True)
 
-# Function to check the file and update the displayed text
+# Function to periodically check the file and update the displayed text
 def check():
     while True:
         with open("d.txt", "r") as f:
